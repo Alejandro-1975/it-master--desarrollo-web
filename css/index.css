@@ -3,36 +3,52 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Work Sans', sans-serif;
+a {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 3px;
+
+}
+a:hover {
+    border: 1px solid grey;
+    color: red; 
+    
+}
+body,
+button {
+    font-family: 'Work Sans', sans-serif ;
 }
 
-button {
-    font-family: ;
-}
 #fondo-pagina {
     background-color: azure;
 }
 
 
 #first-nav {
-    background-color: rgb(49, 46, 88);
+    background: lightgray;
     text-align: right;     
     padding: 12px;
-    margin-bottom: 1px;
+    
         }
 #first-nav a {
     color: ghostwhite;
 }
-#second-nav {
-    background-color: rgb(49, 46, 88);
-    padding: 12px;
 
+#second-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 12px;
+    background: white;
 }
-#second-nav img {
-    height: 50px;
+
+#second-nav .logo {
+    height: 60px;
 }
-#banner {
+.second-nav-menu {
+    position: relative;
+}
+#banner  {
     text-align: center;
     padding: 80px;
     background-image: url(http://placeimg.com/1000/300/tech);
@@ -44,34 +60,44 @@ button {
 }   
 #banner button {
     padding: 12px 24px;
-    border: 3px solid lightblue;
+    border: 1px solid lightblue;
     border-radius: 3px;
 } 
-
-#items {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 48px;
-            
+#banner h1,
+#banner button {
+    margin: 12px;
+  
+}
+#banner .overlay {
+    background: rgba(100,100,100,.4);
 }
 
-#items div {
-       
-    width: 23%;
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 24px;
+            
+}
+   
+ 
+#items .item-products {
+    width: 24%;
     text-align: center;
-  /*  border: 1px solid rgb(201, 202, 204) */
+    border: 1px solid #999;
     margin: 12px auto;
-         
+    
+}
 
-    }
-#items div img{
+#items .item-products img{
        width: 100%;
 
     }
-#items div p {
-    padding: 12px;
+#items .item-products p {
+    margin: 12px;
     line-height: 32px;
+    text-align: center;
+    
     }
 .negrita {
     font-weight: bold;
@@ -89,7 +115,6 @@ button {
 .descuento {
     color: forestgreen;
     
-
 }
 .tachado,
 .precio-final,
@@ -97,19 +122,100 @@ button {
     display: block;
 }
 
-.paginacion button {
+.paginacion {
     border: none;
     padding: 12px 24px;
     background-color: goldenrod;
 
 }
-.paginacion button:hover {
+.paginacion:hover {
     font-weight: bold;
-    box-shadow: grey 3px 3px 3px;
+    box-shadow: grey 3px 3px 6px;
+}
+.cookie {
+    background: rgba(0,0,0,.75);
+    color: white;
+    text-align: center;
+    padding:  24px;
+    position: sticky;
+    bottom: 0;
 }
 
 #footer {
-    height: 400px;
-    background-color: rgb(26, 21, 54);
+    height: 200px;
+    background-color: lightgray;
+    padding: 24px;
 }
+#footer form input {
+    padding: 6px;
+    font-size: 18px;
+    color: steelblue;
+    border: 1px solid cadetblue;
+    border-radius: 3px;
+}
+#footer form button {
+    padding: 6px;
+    font-size: 18px;
+    color: white;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+   
+
+@media screen and (max-width: 768px) {
+    #banner {
+        padding: 20px;
+    }
     
+    #banner h1 {
+        font-size: 36px;
+        
+    }
+
+    #items {
+        padding: 24px;
+    }
+
+    #items .item-product {
+       width: 48%;
+    
+   } 
+}
+
+@media screen and (max-width: 425px) {
+    
+    #banner {
+        display: none;
+    }
+    #banner h1 {
+        font-size: 36px;
+    }
+    #items {
+        padding: 6px;
+    }
+    #items .item-product {
+        width: 100%;
+    }       
+    #second-nav .logo {
+        height: 36px;
+    }
+    #second-nav .second-nav-menu {
+        position: relative;
+    }
+    #second-nav .second-nav-links {
+        display: none ;
+        position: absolute;
+        top: 36 px;
+        right: 0px;
+        background: white;
+    }
+    #second-nav .second-nav-hamburger {
+        border: 1px solid gray;
+        text-align: center;
+    }
+
+    #second-nav .second-nav-hamburger:hover + .second-nav-links { 
+        display:flex;
+        flex-direction: column;
+        text-align: right;
+    }
+}
