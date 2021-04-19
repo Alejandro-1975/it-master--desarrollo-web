@@ -78,14 +78,105 @@ var itemsContainer = document.querySelector('#items')
 var items = [
     {
         foto : 'http://placeimg.com/300/300/people',
-        textoPrin : 'Product category one',
+        textoPrin : 'Indumentaria deportiva',
         textoSec : 'la mejor seleccion de productos',
+        tachado : '$15000 ',
+        precioFinal: '$12000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/nature',
+        textoPrin : 'Productos de belleza',
+        textoSec : 'La mejor seleccion de productos',
+        tachado : '$1500',
+        precioFinal: '$1000',
+        descuento: '15% OFF'
     },
     {
         foto : 'http://placeimg.com/300/300/people',
         textoPrin : 'Product category one',
         textoSec : 'La mejor seleccion de productos',
-    }]
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+               
+    {
+       foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'la mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'la mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'La mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'La mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+              
+    {
+       foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'la mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'La mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+               
+    {
+       foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'la mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'la mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    },
+    {
+        foto : 'http://placeimg.com/300/300/people',
+        textoPrin : 'Product category one',
+        textoSec : 'La mejor seleccion de productos',
+        tachado : '$27000 ',
+        precioFinal: '$20000',
+        descuento: '15% OFF'
+    }           
+]    
+   
     
 for (var i = 0 ; i <items.length; i++) { console.log(items)
     var html = ''    
@@ -93,6 +184,11 @@ for (var i = 0 ; i <items.length; i++) { console.log(items)
         html += '<img src="' + items[i].foto + '" alt="logo Google">'
         html += '<p><span class="negrita">' + items[i].textoPrin + '</span></p>'
         html += '<p>' + items[i].textoSec + '</p>'
+        html += '<p>'
+        html += '<span class="tachado">' + items[i].tachado + '</span>'
+        html += '<span class="precio-final">' + items[i].precioFinal + '</span>'
+        html += '<span class="descuento">' + items[i].descuento + '</span>'
+        html += '</p>'
         html += '</div>'
         itemsContainer.innerHTML += html
     }
