@@ -140,6 +140,10 @@ button {
     position: sticky;
     bottom: 0;
 }
+.cookie a {
+    border: none;
+    color: white;
+}
 
 #footer {
     height: 200px;
@@ -159,6 +163,12 @@ button {
     color: white;
     background: dodgerblue;
     border: 1px solid dodgerblue;
+    border-radius: 3px;
+}
+
+#footer p {
+    line-height: 2em;
+}
    
 
 @media screen and (max-width: 768px) {
@@ -175,7 +185,7 @@ button {
         padding: 24px;
     }
 
-    #items .item-product {
+    #items .item-products {
        width: 48%;
     
    } 
@@ -192,7 +202,7 @@ button {
     #items {
         padding: 6px;
     }
-    #items .item-product {
+    #items .item-products {
         width: 100%;
     }       
     #second-nav .logo {

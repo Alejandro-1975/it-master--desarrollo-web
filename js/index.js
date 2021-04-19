@@ -47,15 +47,15 @@ aceptar. addEventListener("click", function () {
     cartelCookie.style.display = "none"
 })
 // Envio de email
-var botonDeEnviar = document.querySelector("#footer form button")
+var botonDeEnviar = document.querySelector('#footer form button')
 
-botonDeEnviar.addEventListener("click", function() {
+botonDeEnviar.addEventListener('click', function() {
     botonDeEnviar.parentElement.remove()
  
-    let parrafo = document.createElement("p")
+    let parrafo = document.createElement('p')
     parrafo.innerHTML = "Hemos recibido la suscripcion"
    
-    document.querySelector("#footer").appendChild(parrafo)
-}
+    document.querySelector('#footer').appendChild(parrafo)
+})
 // 
 console.log(botonDeEnviar)
