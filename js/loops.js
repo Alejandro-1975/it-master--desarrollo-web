@@ -68,9 +68,12 @@ var links = [
    ]
 
 for (var i = 0; i < links.length; i++) {
-    linksContainer.innerHTML += '<a href="' + links[i].href + '">' + links[i].name + '</a>'
-}
+    linksContainer.innerHTML += generateLink(links[i])
+    }
 
+function generateLink() {
+ return '<a href="' + links.href + '">' + links.name + '</a>'   
+}
     
 var itemsContainer = document.querySelector('#items')
 
@@ -84,6 +87,7 @@ var items = [
         precioFinal: '$12000',
         descuento: '15% OFF'
     },
+
     {
         foto : 'http://placeimg.com/300/300/nature',
         textoPrin : 'Productos de belleza',
@@ -192,4 +196,5 @@ for (var i = 0 ; i <items.length; i++) { console.log(items)
         html += '</div>'
         itemsContainer.innerHTML += html
     }
+    
     
